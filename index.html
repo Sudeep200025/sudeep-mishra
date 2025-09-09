@@ -3,13 +3,12 @@
 <title>HTML-5</title>
 <header>
 <div id="col1">
-<img src="images/gt.jpg" width="100%" title="sudeep pic">
 
-<p><b><u><i>Sudeep Mishra</p></b></u></i>
+<img src="images/gt.jpg"alt="sudeep mishra" width="100%" title="sudeep pic">
+<p><b><u><i><a href=My resume>Sudeep Mishra</p></b></u></i></a>
 </div>
 <div id="col2">
-<img src="images/digital-marketing.png" style="height:250px;width:85%;margin-right:00px">
-
+<img src="images/p2.jpg" style="height:250px;width:85%;margin-right:00px">
 </div>
 <br/>
 
@@ -18,15 +17,22 @@
 <style>
 header
 {
-background:powderblue;
+background:#fcfcf6;
 width:97%;
 margin:auto;
 text-align:left;
 padding:20px;
 margin-top:10px;
 margin:auto;
+border-radius:5px;
 box-shadow:10px 10px 10px gray;
 }
+header a
+{
+color:black;
+text-decoration:none;
+}
+
 #col1
 {
 //background:red;
@@ -44,21 +50,23 @@ width:80%;
 //background:yellow;
 height:300px;
 }
+
 #box
 {
 width:90%;
 //border:1px black solid;
+background:#fcfcf6;
 height:auto;
 margin:auto;
 padding:30px;
 font-size=16px
 font-family:verdana;
-border-radius:10px;
+border-radius:5px;
 box-shadow:10px 10px 10px gray;
 }
 body
 {
-background:pink;
+background:#c8cbef;
 }
 ol
 {
@@ -70,20 +78,33 @@ list-style:none;
 display:inline;
 padding:10px;
 }
+nav ol li a:link{text-decoration:none;}
 ol li:hover
 {
-background:powderblue;
+background:#eeeffa;
+padding:13px;
+border-radius:6px;
 }
 nav
 {
-//background:yellow;
+background:#fcfcf6;
 width:80%;
 box-shadow:10px 10px 10px gray;
 margin:auto;
-height:40px;}
+height:40px;
+border-radius:5px;
+text-align:center;
+}
+nav ol li
+{
+list-style:non;
+backgroung:#eeeffa;
+cursor:pointer;
+transition:0.60s;
+}
+
 </style>
 <body>
-
 <nav>
 <ol>
 <li><a href="introduction.html">Home</a></li>
@@ -92,6 +113,7 @@ height:40px;}
 </ol>
 </nav>
 <h3> About Me </h3>
+
 <div id="box">
 <p>
 I am a dedicated and results-oriented professional with a strong background in software development, marketing, known for delivering high-quality work and driving impactful outcomes. With 3 years of experience, I have developed expertise in project management, data analysis, client relations, and consistently strive to stay ahead of industry trends. I value collaboration, continuous learning, and integrity in every aspect of my work. My approach combines strategic thinking with attention to detail, enabling me to contribute meaningfully to team goals and organizational success.
@@ -102,5 +124,3 @@ As a digital marketing student, my living standard is modest yet purpose-driven.
 </div>
 </body>
 <html>
-
-
