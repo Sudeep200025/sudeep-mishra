@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Illustration
+</title>
+</head>
+<header>
+<b>Illustration</b>
+</header>
+<style>
+
+
+
+</style>
+<body>
+<main>
+
+<a href="p28"><img src="images/p28.jpg" class="pic"></a>
+
+
+
+
+
+
+
+</main>
+</body>
+<footer>
+</footer>
+</html>
