@@ -1,18 +1,71 @@
 <!doctype html>
-<html>
-<style>
-body 
-{
-background: linear-gradient(to right, #c8cbef, #faf9ee);
-text-align:center;
-}
-body img
-{
-border:1px black solid;
-box-shadow:10px 10px 10px gray;
-}
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Page</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to right, #c8cbef, #faf9ee);
+      font-family: "Poppins", Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #2c2c54;
+      font-size: 28px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .img-container {
+      width: 100%;
+      max-width: 900px; /* limit size on big screens */
+    }
+
+    .img-container img {
+      width: 100%;   /* responsive */
+      height: auto;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    /* Responsive Text */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
 <body>
-<img src="images/p4.jpg">
-<body>
-<html>
+   <div class="img-container">
+    <img src="images/p4.jpg" alt="Responsive Example">
+  </div>
+</body>
+</html>

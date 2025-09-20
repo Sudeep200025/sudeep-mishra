@@ -1,155 +1,181 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<title>
-Illustration
-</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illustration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #c8cbef, #faf9ee);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      width: 100%;
+      background: #faf9ee;
+      font-size: 2rem;
+      font-weight: bold;
+      height: 80px;
+      line-height: 80px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      color: #444;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    main {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .pic {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+
+    footer {
+      width: 100%;
+      background: #faf9ee;
+      margin-top: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 30px;
+      box-shadow: 0px -4px 10px rgba(0,0,0,0.2);
+    }
+
+    footer div {
+      margin: 10px;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    footer a {
+      color: black;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      background: #eeeffa;
+      padding: 3px 6px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    #pet {
+      text-align: center;
+    }
+
+    #pet img {
+      width: 120px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    #met, #it {
+      font-size: 1rem;
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.6rem;
+        height: 70px;
+        line-height: 70px;
+      }
+
+      main {
+        gap: 15px;
+        padding: 20px;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+
+      header {
+        font-size: 1.4rem;
+      }
+
+      .pic {
+        border-radius: 10px;
+      }
+    }
+  </style>
 </head>
-<header>
-<b>Illustrations</b>
-</header>
-<style>
-body {
-  background: linear-gradient(to right, #c8cbef, #faf9ee);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  text-align: center;
-  width: 100%;
-  background: #faf9ee;
-  font-size: 35px;
-  font-weight: bold;
-  height: 80px;
-  line-height: 80px;  
-  box-shadow: 0 4px 10px gray;
-  color: #444;
-  top: 0;
-}
-
-main {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.pic {
-  width: 100%;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px gray;
-}
-
-.pic:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px gray;
-  cursor: pointer;
-}
-footer
-{
-width:100%;
-//background:#bfb278;
-margin:auto;
-margin-top:90px;
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-box-sizing:border-box;
-border:1px black solid;
-padding:50px;
-//height:200px;
-box-shadow:10px 10px 10px gray;
-}
-footer a:hover
-{
-background:#eeeffa;
-padding:3px;
-border-radius:6px;
-transition:0.60s;
-}
-#pet
-{
-width:15%;
-col
-text-align:center;
-}
-#pet img
-{
-width:100%;
-heigth:100%
-}
-#met
-{
-//text-align:center;
-font-size:20px;
-}
-#met a
-{
-color:black;
-text-decoration:none;
-}
-#it
-{
-text-align:left;
-font-size:20px;
-}
-#it a
-{
-color:black;
-text-decoration:none;
-}
-
-
-</style>
 <body>
-<main>
 
-<a href="p28.html"><img src="images/p28.jpeg" class="pic"></a>
-<a href="p11.html"><img src="images/p11.jpg" class="pic"></a>
-<a href="p10.html"><img src="images/p10.jpg" class="pic"></a>
-<a href="p27.html"><img src="images/p27.jpeg" class="pic"></a>
+  <header>
+    Illustrations
+  </header>
 
-<a href="p12.html"><img src="images/p12.jpg" class="pic"></a>
-<a href="p26.html"><img src="images/p26.jpeg" class="pic"></a>
-<a href="p16.html"><img src="images/p16.jpg" class="pic"></a>
+  <main>
+    <a href="p28.html"><img src="images/p28.jpeg" class="pic" alt="Illustration 28"></a>
+    <a href="p11.html"><img src="images/p11.jpg" class="pic" alt="Illustration 11"></a>
+    <a href="p10.html"><img src="images/p10.jpg" class="pic" alt="Illustration 10"></a>
+    <a href="p27.html"><img src="images/p27.jpeg" class="pic" alt="Illustration 27"></a>
+    <a href="p12.html"><img src="images/p12.jpg" class="pic" alt="Illustration 12"></a>
+    <a href="p26.html"><img src="images/p26.jpeg" class="pic" alt="Illustration 26"></a>
+    <a href="p16.html"><img src="images/p16.jpg" class="pic" alt="Illustration 16"></a>
+    <a href="p8.html"><img src="images/p8.jpg" class="pic" alt="Illustration 8"></a>
+    <a href="p25.html"><img src="images/p25.jpeg" class="pic" alt="Illustration 25"></a>
+    <a href="p22.html"><img src="images/p22.png" class="pic" alt="Illustration 22"></a>
+    <a href="p7.html"><img src="images/p7.png" class="pic" alt="Illustration 7"></a>
+    <a href="p9.html"><img src="images/p9.jpg" class="pic" alt="Illustration 9"></a>
+    <a href="p23.html"><img src="images/p23.jpg" class="pic" alt="Illustration 23"></a>
+  </main>
 
-<a href="p8.html"><img src="images/p8.jpg" class="pic"></a>
-<a href="p25.html"><img src="images/p25.jpeg" class="pic"></a>
-<a href="p22.html"><img src="images/p22.png" class="pic"></a>
-<a href="p7.html"><img src="images/p7.png" class="pic"></a>
+  <footer>
+    <div id="pet">
+      <img src="images/p6.png" alt="sudeep mishra" title="sudeep pic">
+      <br/>
+      <b>Sudeep Mishra</b><br/>
+      <u>Studying Digital Marketing</u>
+    </div>
 
-<a href="p9.html"><img src="images/p9.jpg" class="pic"></a>
-<a href="p23.html"><img src="images/p23.jpg" class="pic"></a>
+    <div id="met">
+      <u><b>Contact</b></u><br/>
+      sudeepmisha023@gmail.com<br/>
+      +11 (325) 9875*** <br/>
+      The_mishra23 <br/>
+      <a href="https://www.behance.net/sudeepmishra23">Behance</a>
+    </div>
 
-</main>
-
-<footer>
-<div id="pet">
-<img src="images/p6.png"alt="sudeep mishra" title="sudeep pic">
-<br/>
-<b>Sudeep Mishra</b><br/>
-<u>Studying Digital marketing</u>
-</div>
-<div id="met">
-<u><b>contact</b></u><br/>
-sudeepmisha023@gmail.com<br/>
-+11 (325) 9875*** <br/>
-The_mishra23 <br/>
-<a href="https://www.behance.net/sudeepmishra23">Behance</a>
-</div>
-<div id="it">
-<u><b>links </b></u><br/>
-
-<a href="introduction.html">Home</a><br/>
-<a href="https://www.behance.net/sudeepmishra23">Behance</a><br/>
-<a href="project work.html">project work</a><br/>
-<a href="practice.html">Practice Page</a><br/>
-
-
-</footer>
+    <div id="it">
+      <u><b>Links</b></u><br/>
+      <a href="introduction.html">Home</a><br/>
+      <a href="https://www.behance.net/sudeepmishra23">Behance</a><br/>
+      <a href="project work.html">Project Work</a><br/>
+      <a href="practice.html">Practice Page</a><br/>
+    </div>
+  </footer>
 </body>
-
 </html>

@@ -1,224 +1,267 @@
 <!doctype html>
-<html>
-<title>HTML-5</title>
-<header>
-<div id="col1">
-<a href="profile picture.html">
-<img src="images/p6.png"alt="sudeep mishra" width="100%" title="sudeep pic"></a>
-<p><b><u><i><a href=My resume>Sudeep Mishra</p></b></u></i></a>
-</div>
-<div id="col2">
-<img src="images/p3.jpg" style="height:300px;width:85%;margin-right:00px">
-</div>
-<br/>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudeep Mishra - Portfolio</title>
+  <style>
+    /* ---------- Global Reset ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-</header>
+    body {
+      background: linear-gradient(to right, #c8cbef, #faf9ee);
+      font-family: "Poppins", Arial, sans-serif;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background: #fcfcf6;
+      width: 95%;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #col1 {
+      flex: 1 1 200px;
+      text-align: center;
+    }
+    #col1 img {
+      width: 120px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    #col1 p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    #col1 a {
+      text-decoration: none;
+      color: #2c2c54;
+      font-weight: bold;
+    }
+
+    #col2 {
+      flex: 2 1 300px;
+      text-align: center;
+    }
+    #col2 img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* ---------- Navbar ---------- */
+    nav {
+      background: #fcfcf6;
+      width: 90%;
+      margin: 20px auto;
+      padding: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    nav ol {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ol li {
+      margin: 5px 15px;
+    }
+
+    nav ol li a {
+      text-decoration: none;
+      color: #2c2c54;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ol li a:hover {
+      color: #4a69bd;
+      padding: 6px 10px;
+      background: #eeeffa;
+      border-radius: 6px;
+    }
+
+    /* ---------- About Section ---------- */
+    h3 {
+      text-align: center;
+      font-size: 28px;
+      margin-top: 30px;
+      color: #2c2c54;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    #box {
+      width: 90%;
+      max-width: 900px;
+      background: #fcfcf6;
+      margin: 30px auto;
+      padding: 25px;
+      font-size: 17px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-align: justify;
+    }
+
+    #box p {
+      margin-bottom: 18px;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      width: 100%;
+      background: #fcfcf6;
+      margin-top: 60px;
+      padding: 30px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-top: 2px solid #ddd;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer div {
+      flex: 1 1 250px;
+      margin: 10px;
+    }
+
+    footer img {
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    footer b, footer u {
+      color: #2c2c54;
+    }
+
+    footer a {
+      color: #2c2c54;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #4a69bd;
+    }
+
+    /* ---------- Responsive Design ---------- */
+    @media (max-width: 1024px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      #col2 {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ol {
+        flex-direction: column;
+      }
+      nav ol li {
+        margin: 10px 10px;
+      }
+      #box {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 15px;
+      }
+      #col1 img {
+        width: 90px;
+      }
+      h3 {
+        font-size: 22px;
+      }
+      #box {
+        padding: 15px;
+      }
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-<style>
-header
-{
-background:#fcfcf6;
-width:97%;
-margin:auto;
-text-align:left;
-padding:20px;
-margin-top:10px;
-margin:auto;
-border-radius:5px;
-box-shadow:10px 10px 10px gray;
-}
-header a
-{
-color:black;
-text-decoration:none;
-}
-
-#col1
-{
-//background:red;
-width:100px;
-height:250px;
-float:left;
-color:black;
-}
-
-#col2
-{
-margin-left:20%;;
-width:80%;
-
-height:300px;
-}
-
-body {
-  background:  linear-gradient(to right, #c8cbef, #faf9ee);
-  font-family: "Poppins", Arial, sans-serif;  
-  margin: 0;
-  padding: 0;
-  color: #333; 
-  line-height: 1.8;
-}
-
-h3 {
-  text-align: center;
-  font-size: 28px;
-  margin-top: 40px;
-  color: #2c2c54;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-#box {
-  width: 85%;
-  max-width: 900px;  
-  background: #fcfcf6;
-  margin: 40px auto;
-  padding: 30px;
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  text-align: justify;
-}
-
-#box p {
-  margin-bottom: 20px;
-}
-
-ol
-{
-test-align:center;
-}
-ol li
-{
-list-style:none;
-display:inline;
-padding:10px;
-}
-nav ol li a:link{color:black:text-decoration:none;}
-nav ol li a:visited{color:gray;text-decoration:none;}
-
-ol li:hover
-{
-background:#eeeffa;
-padding:13px;
-border-radius:6px;
-}
-nav
-{
-background:#fcfcf6;
-width:80%;
-box-shadow:10px 10px 10px gray;
-margin:auto;
-height:40px;
-border-radius:5px;
-text-align:center;
-}
-nav ol li
-{
-list-style:non;
-backgroung:#eeeffa;
-cursor:pointer;
-transition:0.60s;
-}
-footer
-{
-width:100%;
-//background:#bfb278;
-margin:auto;
-margin-top:90px;
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-box-sizing:border-box;
-border:1px black solid;
-padding:50px;
-//height:200px;
-box-shadow:10px 10px 10px gray;
-}
-footer a:hover
-{
-background:#eeeffa;
-padding:3px;
-border-radius:6px;
-transition:0.60s;
-}
-#pet
-{
-width:15%;
-col
-text-align:center;
-}
-#pet img
-{
-width:100%;
-heigth:100%
-}
-#met
-{
-//text-align:center;
-font-size:20px;
-}
-#met a
-{
-color:black;
-text-decoration:none;
-}
-#it
-{
-text-align:left;
-font-size:20px;
-}
-#it a
-{
-color:black;
-text-decoration:none;
-}
-
-</style>
 <body>
-<nav>
-<ol>
-<li><a href="introduction.html">Home</a></li>
-<li><a href="https://www.behance.net/sudeepmishra23">Behance</a></li>
-<li><a href="project work.html">project work</a></li>
-<li><a href="practice.html">Practice Page</a></li>
+  <!-- Header -->
+  <header>
+    <div id="col1">
+      <a href="profile picture.html">
+        <img src="images/p6.png" alt="sudeep mishra" title="sudeep pic">
+      </a>
+      <p><a href="My resume">Sudeep Mishra</a></p>
+    </div>
+    <div id="col2">
+      <img src="images/p3.jpg" alt="Banner">
+    </div>
+  </header>
 
-</ol>
-</nav>
-<h3> About Me </h3>
+  <!-- Navigation -->
+  <nav>
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://www.behance.net/sudeepmishra23">Behance</a></li>
+      <li><a href="project work.html">Project Work</a></li>
+      <li><a href="practice.html">Practice Page</a></li>
+    </ol>
+  </nav>
 
-<div id="box">
-<p>
-I am a dedicated and results-oriented professional with a strong background in software development, marketing, known for delivering high-quality work and driving impactful outcomes. With 3 years of experience, I have developed expertise in project management, data analysis, client relations, and consistently strive to stay ahead of industry trends. I value collaboration, continuous learning, and integrity in every aspect of my work. My approach combines strategic thinking with attention to detail, enabling me to contribute meaningfully to team goals and organizational success.
-</p>
-<p>
-As a digital marketing student, my living standard is modest yet purpose-driven. I reside in a shared apartment near my university, which helps me manage expenses while staying connected with fellow creatives and marketers-in-the-making. My daily routine blends online classes, freelance gigs, and late-night brainstorming sessions fueled by instant coffee and ambition. I invest in a decent laptop, a stable internet connection, and a few subscriptions to marketing tools and platforms—essentials for staying ahead in the digital world. While I don’t splurge on luxuries, I prioritize experiences that enrich my learning, like attending webinars, networking events, and exploring the latest trends in consumer behavior. It’s not glamorous, but it’s a lifestyle built on hustle, curiosity, and the dream of launching campaigns that actually make an impact.
-</p>
-</div>
+  <!-- About Me -->
+  <h3>About Me</h3>
+  <div id="box">
+    <p>
+      I am a dedicated and results-oriented professional with a strong background in software development and marketing, known for delivering high-quality work and driving impactful outcomes. With 3 years of experience, I have developed expertise in project management, data analysis, and client relations, consistently striving to stay ahead of industry trends. 
+    </p>
+    <p>
+      As a digital marketing student, my lifestyle is modest yet purpose-driven. I live in a shared apartment near my university, balancing classes, freelance gigs, and late-night brainstorming sessions fueled by coffee. While I don’t splurge on luxuries, I invest in tools and experiences that help me grow—like webinars, networking events, and exploring the latest consumer trends. It’s a lifestyle built on hustle, curiosity, and ambition.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div id="pet">
+      <img src="images/p6.png" alt="sudeep mishra" title="sudeep pic">
+      <br>
+      <b>Sudeep Mishra</b><br>
+      <u>Studying Digital Marketing</u>
+    </div>
+    <div id="met">
+      <u><b>Contact</b></u><br>
+      sudeepmisha023@gmail.com<br>
+      +11 (325) 9875***<br>
+      The_mishra23<br>
+      <a href="https://www.behance.net/sudeepmishra23">Behance</a>
+    </div>
+    <div id="it">
+      <u><b>Links</b></u><br>
+      <a href="introduction.html">Home</a><br>
+      <a href="https://www.behance.net/sudeepmishra23">Behance</a><br>
+      <a href="project work.html">Project Work</a><br>
+      <a href="practice.html">Practice Page</a><br>
+    </div>
+  </footer>
 </body>
-<footer>
-<div id="pet">
-<img src="images/p6.png"alt="sudeep mishra" title="sudeep pic">
-<br/>
-<b>Sudeep Mishra</b><br/>
-<u>Studying Digital marketing</u>
-</div>
-<div id="met">
-<u><b>contact</b></u><br/>
-sudeepmisha023@gmail.com<br/>
-+11 (325) 9875*** <br/>
-The_mishra23 <br/>
-<a href="https://www.behance.net/sudeepmishra23">Behance</a>
-</div>
-<div id="it">
-<u><b>links </b></u><br/>
-
-<a href="introduction.html">Home</a><br/>
-<a href="https://www.behance.net/sudeepmishra23">Behance</a><br/>
-<a href="project work.html">project work</a><br/>
-<a href="practice.html">Practice Page</a><br/>
-
-
-</footer>
-<html>
+</html>
