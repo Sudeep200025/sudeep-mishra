@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aadi Vastra</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Georgia", serif;
+      background-color: #f8f5ee;
+      color: #3a2e1f;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Background logo with low opacity */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("images/p29.png") no-repeat center center;
+      background-size: 400px; /* adjust logo size */
+      opacity: 0.08; /* control transparency */
+      z-index: -1; /* keep it behind everything */
+    }
+
+    /* Header */
+    header {
+      background-color: #c49a6c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #f4e8b2;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #3a2e1f;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c49a6c;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #5b4636;
+    }
+
+    /* Product Section */
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .box {
+      background-color: rgba(255,255,255,0.9); /* slightly transparent for logo to peek through */
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .box img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      font-size: 0.95rem;
+      color: #5b4636;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #c49a6c;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    AADI VASTRA
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Collections</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Welcome to Aadi Vastra</h1>
+    <p>Where tradition meets elegance. Handcrafted fabrics for the modern world.</p>
+  </section>
+
+  <main>
+    <div class="boxes">
+      <div class="box">
+        <img src="images/p31.jpg" alt="Traditional Saree">
+        <h3>Traditional Sarees</h3>
+        <p>Elegant, handwoven sarees inspired by ancient designs.</p>
+      </div>
+      <div class="box">
+        <img src="images/p32.jpg" alt="Handloom Kurta">
+        <h3>Handloom Kurtas</h3>
+        <p>Comfortable and stylish kurtas made with natural dyes.</p>
+      </div>
+      <div class="box">
+        <img src="images/p30.png" alt="Woolen Shawl">
+        <h3>Woolen Shawls</h3>
+        <p>Warm, intricate shawls crafted with love and tradition.</p>
+      </div>
+       <div class="box">
+        <img src="images/p33.jpeg" alt="Khadi Shirt">
+        <h3>Khadi shirt</h3>
+        <p>khadi shirt - traditional woven with modern style.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Designed with love for tradition
+  </footer>
+
+</body>
+</html>
