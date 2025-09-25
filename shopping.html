@@ -18,6 +18,7 @@
       color: #3a2e1f;
       position: relative;
       min-height: 100vh;
+      line-height: 1.6;
     }
 
     /* Background logo with low opacity */
@@ -49,8 +50,9 @@
     nav {
       background-color: #f4e8b2;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       padding: 15px;
       font-size: 1.1rem;
     }
@@ -69,7 +71,7 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
 
     .hero h1 {
@@ -87,11 +89,11 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 40px;
+      padding: 40px 20px;
     }
 
     .box {
-      background-color: rgba(255,255,255,0.9); /* slightly transparent for logo to peek through */
+      background-color: rgba(255,255,255,0.9);
       border: 1px solid #ddd;
       border-radius: 10px;
       padding: 20px;
@@ -128,6 +130,77 @@
       padding: 15px;
       margin-top: 30px;
       font-size: 0.9rem;
+    }
+
+    /* -------- Responsive Breakpoints -------- */
+
+    /* Small phones */
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.5rem;
+        padding: 15px;
+      }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .boxes {
+        padding: 20px 10px;
+      }
+    }
+
+    /* Tablets */
+    @media (min-width: 481px) and (max-width: 768px) {
+      header {
+        font-size: 1.8rem;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      .boxes {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+      }
+    }
+
+    /* Laptops */
+    @media (min-width: 769px) and (max-width: 1200px) {
+      .hero {
+        padding: 70px 40px;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .boxes {
+        gap: 25px;
+      }
+    }
+
+    /* Big Screens */
+    @media (min-width: 1201px) {
+      .hero {
+        padding: 100px 60px;
+      }
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      .hero p {
+        font-size: 1.4rem;
+      }
+      .boxes {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
     }
   </style>
 </head>
@@ -166,10 +239,10 @@
         <h3>Woolen Shawls</h3>
         <p>Warm, intricate shawls crafted with love and tradition.</p>
       </div>
-       <div class="box">
+      <div class="box">
         <img src="images/p33.jpeg" alt="Khadi Shirt">
-        <h3>Khadi shirt</h3>
-        <p>khadi shirt - traditional woven with modern style.</p>
+        <h3>Khadi Shirts</h3>
+        <p>Khadi shirts – traditional weaving with modern style.</p>
       </div>
     </div>
   </main>
