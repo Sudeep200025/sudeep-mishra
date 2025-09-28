@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>India and Its Independence</title>
+  <style>
+    :root {
+      --saffron: #FF9933;
+      --white: #ffffff;
+      --green: #138808;
+      --blue: #000080;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+      color: var(--blue);
+      padding: 30px 0;
+      text-align: center;
+      border-bottom: 5px solid var(--blue);
+    }
+    header h1 { margin: 0; font-size: 2.5rem; font-weight: bold; }
+    header p { font-size: 1.2rem; margin-top: 8px; }
+
+    nav {
+      background: var(--blue);
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: var(--white);
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+    nav a:hover {
+      color: var(--saffron);
+      border-bottom: 2px solid var(--saffron);
+      padding-bottom: 3px;
+    }
+
+    /* Layout wrapper */
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 180px;
+      background: var(--white);
+      border: 2px solid var(--blue);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      max-height: calc(100vh - 250px);
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h3 {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      background: var(--saffron);
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: bold;
+      border-bottom: 2px solid var(--blue);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    /* Ads container */
+    .ads {
+      flex: 1;
+      overflow: hidden; /* hide scrollbar */
+      position: relative;
+    }
+
+    .ads-inner {
+      display: flex;
+      flex-direction: column;
+      animation: scrollAds 20s linear infinite;
+    }
+
+    .ads a {
+      display: block;
+      margin: 10px;
+      text-align: center;
+    }
+    .ads img {
+      width: 100%;
+      border-radius: 6px;
+      transition: transform 0.3s;
+    }
+    .ads img:hover {
+      transform: scale(1.05);
+      border: 2px solid var(--saffron);
+    }
+
+    /* Auto-scroll keyframes */
+    @keyframes scrollAds {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+
+    /* Content */
+    .content { flex: 1; }
+    section {
+      padding: 30px;
+      background: var(--white);
+      border-radius: 10px;
+      border-left: 6px solid var(--saffron);
+      border-right: 6px solid var(--green);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: var(--blue);
+      margin-top: 0;
+      border-bottom: 2px solid var(--saffron);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    footer {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      position: relative;
+    }
+    footer::before {
+      content: "";
+      display: block;
+      height: 6px;
+      background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; max-height: none; }
+      .ads-inner { animation: scrollAds 15s linear infinite; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>India and Its Independence</h1>
+    <p>A Journey Through Time</p>
+  </header>
+
+  <nav>
+    <a href="#ancient">Ancient History</a>
+    <a href="#british">British Rule</a>
+    <a href="#independence">Post-Independence</a>
+  </nav>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Ad by Sudeep</h3>
+      <div class="ads">
+        <div class="ads-inner">
+          <a href="https://www.behance.net/sudeepmishra23"><img src="images/p7.png" alt="Ad 1"></a>
+          <a href="https://www.behance.net/sudeepmishra23"><img src="images/p8.jpg" alt="Ad 2"></a>
+          <a href="https://www.behance.net/sudeepmishra23"><img src="images/p9.jpg" alt="Ad 3"></a>
+          <a href="https://www.behance.net/sudeepmishra23"><img src="images/p10.jpg" alt="Ad 4"></a>
+          <a href="https://www.behance.net/sudeepmishra23"><img src="images/p11.jpg" alt="Ad 5"></a>
+          <a href="https://www.behance.net/sudeepmishra23"><img src="images/p12.jpg" alt="Ad 6"></a>
+          <!-- Duplicate ads for smooth looping -->
+          <a href="https://www.behance.net/sudeepmishra23"><img src="images/p7.png" alt="Ad 1"></a>
+          <a href="https://www.behance.net/sudeepmishra23"><img src="images/p8.jpg" alt="Ad 2"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+      <section id="ancient">
+        <h2>Ancient History of India</h2>
+        <p>India’s history dates back to the Indus Valley Civilization...</p>
+      </section>
+
+      <section id="british">
+        <h2>British Rule in India</h2>
+        <p>The British East India Company began its influence in the 1600s...</p>
+      </section>
+
+      <section id="independence">
+        <h2>India After Independence</h2>
+        <p>Post-independence, India adopted a democratic constitution in 1950...</p>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <p> Designed by Sudeep</p>
+  </footer>
+
+</body>
+</html>
