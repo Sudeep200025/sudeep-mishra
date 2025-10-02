@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner</title>
+  <style>
+    @keyframes slider {
+      0%   { left: 0%; }
+      20%  { left: 0%; }
+      25%  { left: -100%; }
+      45%  { left: -100%; }
+      50%  { left: -200%; }
+      70%  { left: -200%; }
+      75%  { left: -300%; }
+      95%  { left: -300%; }
+      100% { left: -400%; }
+    }
+
+    body {
+      background: linear-gradient(to right, #c8cbef, #faf9ee);
+    }
+
+    #creation {
+      overflow: hidden;
+      width: 100%;
+      height: 600px;
+      position: relative;
+    }
+
+    header {
+      width: 500%; 
+      height: 600px;
+      display: flex;
+      position: relative;
+      left: 0;
+      animation: slider 12s infinite;
+    }
+
+    .pic {
+      width: 20%; 
+      height: 100%;
+      object-fit: cover;
+    }
+    #remote{
+        width: 98%;
+        margin: auto;
+        text-align:justify;
+        font-size: large;
+        word-spacing: 9px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        padding: 15px;
+        //box-shadow: 10px 10px 10px gray;
+    }
+  </style>
+</head>
+<body>
+  <div id="creation">
+    <header>
+      <img src="images/p34.jpg" class="pic">
+      <img src="images/p35.jpg" class="pic">
+      <img src="images/p36.jpg" class="pic">
+      <img src="images/p37.jpg" class="pic">
+      <img src="images/p38.jpg" class="pic">
+    </header>
+  </div>
+  <div id="remote">
+<h1>Mountains</h1>
+<p1>Mountains are among the most breathtaking wonders of nature, rising majestically above the earth with peaks that touch the sky. They are home to diverse landscapes, from lush green valleys and dense forests to snow-covered summits that sparkle in the sunlight. Mountains play an important role in regulating our climate, providing fresh water through rivers and glaciers, and offering shelter to countless species of plants and animals. Their towering presence often symbolizes strength, stability, and serenity, making them a source of inspiration for travelers, poets, and explorers throughout history.<br/>
+
+The experience of visiting mountains is truly unforgettable. The crisp, cool air, the silence broken only by the rustle of leaves or the call of a bird, and the sweeping views from high altitudes create a sense of peace and wonder. Trekking along winding trails, witnessing sunrises and sunsets from the peaks, and feeling the closeness to nature give visitors a refreshing escape from busy city life. For many, mountains provide not just adventure but also spiritual renewal, reminding us of nature’s grandeur and the smallness of our worries in comparison.</p1>
+  </div>
+  
+</body>
+</html>
