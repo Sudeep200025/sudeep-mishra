@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div Movement Animation</title>
+  <style>
+    header {
+      width: 98%;
+      background-color: beige;
+      text-align: center;
+      font-size: larger;
+      margin: auto;
+      box-shadow: 5px 5px 10px gray;
+    }
+
+    #chlo {
+      width: 250px;
+      height: 90px;
+      background-color: blueviolet;
+      font-size: 30px;
+      text-align: center;
+      color: white;
+      line-height: 90px;
+      position: relative;
+      animation: moveBox 2s infinite linear;
+    }
+    main {
+        font-size: 25px;
+        text-align: justify;
+        padding: 20px;
+    }
+
+    @keyframes moveBox {
+      0% {
+        left: 0%;
+        top: 0%;
+      }
+      25% {
+        left: 60%;
+        top: 0%;
+      }
+      50% {
+        left: 60%;
+        top: 20%;
+      }
+      75% {
+        left: 0%;
+        top: 20%;
+      }
+      100% {
+        left: 0%;
+        top: 0%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ANIMATION IN HTML</h1>
+  </header>
+  <div id="chlo">
+    chlooooo
+  </div>
+  <main>
+    <p>
+        CSS animations provide smooth transitions between style configurations using just HTML and CSS. They consist of a style definition and keyframes that outline the start, end, and intermediate states of the animation. This approach allows you to animate style properties without needing JavaScript or external media.
+    </p>
+  </main>
+</body>
+</html>
