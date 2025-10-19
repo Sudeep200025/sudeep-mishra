@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url("images/p55.jpg");
+      background-size: cover;        
+      background-position: center;     
+      background-repeat: no-repeat;    
+      height: 100vh;                  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #login {
+      background: rgb(255, 255, 255, 0.8);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <div id="login">
+    <form action="http://sudeep/user/login.php" method="get">
+      <table border="0" cellpadding="10">
+        <caption><h1>Login</h1></caption>
+        <tr>
+          <td><label for="userid">User</label></td>
+          <td><input id="userid" type="text"></td>
+        </tr>
+        <tr>
+          <td><label for="upass">User Password</label></td>
+          <td><input id="upass" type="password"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Login">
+            <input type="reset">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
