@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Aadi Vastra</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Georgia", serif;
+      background-color: #f8f5ee;
+      color: #3a2e1f;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #c49a6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 30px 40px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.8s ease;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #3a2e1f;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-spacing: 10px;
+    }
+
+    td {
+      padding: 5px 0;
+      vertical-align: middle;
+    }
+
+    td label {
+      font-weight: bold;
+      color: #5b4636;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #c49a6c;
+      border-radius: 6px;
+      font-size: 1rem;
+      background-color: #fffaf4;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #a57c50;
+      background-color: #fff8ef;
+    }
+
+    button {
+      width: 100%;
+      background-color: #c49a6c;
+      color: white;
+      font-size: 1.1rem;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #a57c50;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    p a {
+      color: #a57c50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #c49a6c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 20px;
+      }
+      header {
+        font-size: 1.5rem;
+      }
+      td {
+        display: block;
+        width: 100%;
+      }
+      td:first-child {
+        margin-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    AADI VASTRA
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h2>Create Your Account</h2>
+
+      <form action="#" method="post">
+        <table>
+          <tr>
+            <td><label for="name">Full Name</label></td>
+            <td><input type="text" id="name" name="name" placeholder="Enter your full name" required></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email Address</label></td>
+            <td><input type="email" id="email" name="email" placeholder="Enter your email" required></td>
+          </tr>
+          <tr>
+            <td><label for="phone">Phone Number</label></td>
+            <td><input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required></td>
+          </tr>
+          <tr>
+            <td><label for="password">Create Password</label></td>
+            <td><input type="password" id="password" name="password" placeholder="Enter password" required></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button type="submit">Register</button>
+            </td>
+          </tr>
+        </table>
+
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Aadi Vastra | Crafted with love
+  </footer>
+
+</body>
+</html>

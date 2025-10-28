@@ -3,69 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Login | Aadi Vastra</title>
   <style>
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
-      font-family: "Poppins", sans-serif;
-      background-image: url("images/p55.jpg");
-      background-size: cover;        
-      background-position: center;     
-      background-repeat: no-repeat;    
-      height: 100vh;                  
+      font-family: "Georgia", serif;
+      background-color: #f8f5ee;
+      color: #3a2e1f;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Background logo with low opacity */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("images/p29.png") no-repeat center center;
+      background-size: 400px;
+      opacity: 0.08;
+      z-index: -1;
+    }
+
+    /* Header */
+    header {
+      background-color: #c49a6c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #f4e8b2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #3a2e1f;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c49a6c;
+    }
+
+    /* Main container */
+    main {
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 40px 20px;
     }
 
-    #login {
-      background: rgb(255, 255, 255, 0.8);
-      padding: 30px 40px;
+    /* Login Box */
+    #login-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 1px solid #ddd;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      padding: 40px 50px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 420px;
+      width: 100%;
+      animation: fadeIn 1s ease;
     }
 
-    h1 {
+    #login-box h2 {
       text-align: center;
-      margin-bottom: 20px;
+      color: #3a2e1f;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
     }
 
     table {
       width: 100%;
+      border-spacing: 12px;
     }
 
-    
+    label {
+      font-weight: bold;
+      color: #5b4636;
+    }
 
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #c49a6c;
+      border-radius: 6px;
+      background-color: #fffaf4;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #a57c50;
+      background-color: #fff8ef;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #c49a6c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      margin-right: 10px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #a57c50;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    p a {
+      color: #a57c50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #c49a6c;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      margin-top: 30px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #login-box {
+        padding: 25px;
+      }
+
+      table td {
+        display: block;
+      }
+
+      table td:first-child {
+        margin-bottom: 6px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div id="login">
-    <form action="http://sudeep/user/login.php" method="get">
-      <table border="0" cellpadding="10">
-        <caption><h1>Login</h1></caption>
-        <tr>
-          <td><label for="userid">User</label></td>
-          <td><input id="userid" type="text"></td>
-        </tr>
-        <tr>
-          <td><label for="upass">User Password</label></td>
-          <td><input id="upass" type="password"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            <input type="submit" value="Login">
-            <input type="reset">
-          </td>
-        </tr>
-      </table>
-    </form>
-  </div>
+
+  <header>
+    AADI VASTRA
+  </header>
+
+
+  <main>
+    <div id="login-box">
+      <h2>Login to Your Account</h2>
+      <form action="http://sudeep/user/login.php" method="get">
+        <table>
+          <tr>
+            <td><label for="userid">Username:</label></td>
+            <td><input type="text" id="userid" name="userid" placeholder="Enter your username" required></td>
+          </tr>
+          <tr>
+            <td><label for="upass">Password:</label></td>
+            <td><input type="password" id="upass" name="upass" placeholder="Enter your password" required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="Login">
+              <input type="reset" value="Reset">
+            </td>
+          </tr>
+        </table>
+      </form>
+      <p>Don’t have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Aadi Vastra | Designed with love for tradition
+  </footer>
+
 </body>
 </html>
