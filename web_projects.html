@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Page | Sudeep Mishra</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #c8cbef, #faf9ee, #fbe3e8, #d6f7e4);
+      color: #2c2c54;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      color: #2c2c54;
+      font-weight: 700;
+    }
+    nav {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 10px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li {
+      margin: 8px 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2c2c54;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background: #eeeffa;
+      color: #4a69bd;
+    }
+
+    nav ul li a.active {
+      background: #4a69bd;
+      color: white;
+    }
+
+    section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: clamp(20px, 3vw, 28px);
+      margin-bottom: 25px;
+      color: #2c2c54;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .portfolio-item {
+      display: block;
+      background: #fcfcf6;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .portfolio-item p {
+      margin: 15px 0;
+      font-weight: 600;
+      color: #2c2c54;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      text-align: center;
+      color: #2c2c54;
+      font-size: 15px;
+      border-top: 2px solid #ddd;
+      font-size: larger;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #2c2c54;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: #4a69bd;
+      background: #eeeffa;
+      border-radius: 5px;
+      padding: 3px 6px;
+    }
+
+
+    @media (max-width: 768px) {
+      header {
+        padding: 40px 10px;
+      }
+      section {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section {
+        width: 95%;
+        margin: 40px auto;
+      }
+      .portfolio-item img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Practice Page</h1>
+  </header>
+
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://www.behance.net/sudeepmishra23" target="_blank">Behance</a></li>
+      <li><a href="web_projects.html">Project Work</a></li>
+      <li><a href="#" class="active">Practice Page</a></li>
+    </ul>
+  </nav>
+
+  <section id="project">
+    <h2>Web projects</h2>
+    <div class="portfolio-grid">
+
+      <a href="https://sudeep200025.github.io/sudeepAOTM/" class="portfolio-item">
+        <img src="images/p46.jpg" alt="Digital indian 2047">
+        <p>Digital indian 2047</p>
+      </a>
+
+
+    </div>
+  </section>
+
+
+
+  <footer>
+    <b>Sudeep Mishra</b> | 
+    <a href="mailto:sudeepmisha023@gmail.com">sudeepmisha023@gmail.com</a> |
+    <a href="https://www.behance.net/sudeepmishra23" target="_blank">Behance</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Page | Sudeep Mishra</title>
+  <style>
+    /* --- RESET --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #c8cbef, #faf9ee, #fbe3e8, #d6f7e4);
+      color: #2c2c54;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      color: #2c2c54;
+      font-weight: 700;
+    }
+
+    /* --- NAVBAR --- */
+    nav {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 10px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li {
+      margin: 8px 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2c2c54;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background: #eeeffa;
+      color: #4a69bd;
+    }
+
+    nav ul li a.active {
+      background: #4a69bd;
+      color: white;
+    }
+
+    /* --- MAIN CONTENT --- */
+    section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: clamp(20px, 3vw, 28px);
+      margin-bottom: 25px;
+      color: #2c2c54;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .practice {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fcfcf6;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      text-align: center;
+      font-size: 22px;
+      color: #2c2c54;
+      margin-bottom: 15px;
+    }
+
+    .card ul {
+      list-style: disc;
+      padding-left: 25px;
+    }
+
+    .card li {
+      margin: 10px 0;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #2c2c54;
+      font-weight: 600;
+      transition: 0.3s;
+      word-break: break-word;
+    }
+
+    .card a:hover {
+      color: #4a69bd;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      text-align: center;
+      color: #2c2c54;
+      font-size: 15px;
+      border-top: 2px solid #ddd;
+      font-size: larger;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #2c2c54;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: #4a69bd;
+      background: #eeeffa;
+      border-radius: 5px;
+      padding: 3px 6px;
+    }
+
+    /* --- RESPONSIVE DESIGN --- */
+    @media (max-width: 1024px) {
+      nav ul {
+        flex-wrap: wrap;
+      }
+      .practice {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 40px 10px;
+      }
+      header h1 {
+        font-size: 28px;
+      }
+      section {
+        padding: 25px;
+      }
+      nav ul li {
+        margin: 5px 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav ul {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      section {
+        width: 95%;
+        margin: 40px auto;
+      }
+      .card {
+        padding: 20px;
+      }
+      .card h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Practice Page</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://www.behance.net/sudeepmishra23" target="_blank">Behance</a></li>
+      <li><a href="project work.html">Project Work</a></li>
+      <li><a href="#" class="active">Practice Page</a></li>
+    </ul>
+  </nav>
+
+  <!-- Practice Section -->
+  <section>
+    <h2>Practice Work</h2>
+    <div class="practice">
+      <div class="card">
+        <h3>Making Web Pages</h3>
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="project work.html">List in HTML</a></li>
+          <li><a href="Illustration.html">Adding Images in HTML</a></li>
+          <li><a href="shopping.html">Shopping Page</a></li>
+          <li><a href="indian history.html">Ads in HTML</a></li>
+          <li><a href="banner.html">Banner</a></li>
+          <li><a href="Table.html">Table</a></li>
+          <li><a href="animation.html">Animation</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <b>Sudeep Mishra</b> | 
+    <a href="mailto:sudeepmisha023@gmail.com">sudeepmisha023@gmail.com</a> |
+    <a href="https://www.behance.net/sudeepmishra23" target="_blank">Behance</a>
+  </footer>
+
+</body>
+</html>
