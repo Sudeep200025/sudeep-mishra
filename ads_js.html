@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+background:#e6f4ea;
+}
+.header{
+background:#1b5e20;
+color:white;
+padding:20px;
+text-align:center;
+}
+.section{
+padding:20px;
+background:white;
+margin:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h2{
+color:#1b5e20;
+}
+.footer{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:10px;
+margin-top:20px;
+}
+        .add1style {
+            width: 300px;
+            height: 200px;
+            border: 1px ridge black;
+            box-shadow: inset 0px 0px 10px rgba(0,0,0,0.4);
+            position: absolute;
+            text-align: center;
+            background: white;
+            padding-top: 10px;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            margin-left: 90%;
+            width: 25px;
+            height: 25px;
+            border-radius: 100px;
+            border: none;
+            background: red;
+            color: white;
+            font-weight: bold;
+        }
+
+        .popup-img {
+            width: 90%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var add = document.createElement("div");
+
+        function showadd() {
+            add.className = "add1style";
+            add.style.top = "20%";
+            add.style.left = "30%";
+
+            add.innerHTML = `
+                <button class="close-btn" onclick="closeDialog()">X</button>
+                <img class="popup-img" src="images/a2.gif">
+            `;
+
+            document.body.appendChild(add);
+        }
+
+        function closeDialog() {
+            if (document.body.contains(add)) {
+                document.body.removeChild(add);
+            }
+        }
+
+        setTimeout(showadd, 5000);
+
+        setTimeout(closeDialog, 11000);
+
+        document.title = "ready";
+    </script>
+    <div class="header">
+<h1>Pollution & Environment</h1>
+<p>Save Nature • Save Future</p>
+</div>
+
+
+<div class="section">
+<h2>What is Pollution?</h2>
+<p>Pollution is the introduction of harmful materials into the environment. These materials can affect air, water, and land, causing damage to humans, animals, and plants.</p>
+</div>
+
+
+<div class="section">
+<h2>Types of Pollution</h2>
+<ul>
+<li><strong>Air Pollution:</strong> Smoke from vehicles and factories.</li>
+<li><strong>Water Pollution:</strong> Waste dumped into rivers and oceans.</li>
+<li><strong>Land Pollution:</strong> Plastic waste and chemicals in soil.</li>
+<li><strong>Noise Pollution:</strong> Loud sounds from traffic and machines.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h2>How to Save the Environment</h2>
+<ul>
+<li>Plant more trees</li>
+<li>Avoid plastic bags</li>
+<li>Use public transport</li>
+<li>Save water and electricity</li>
+<li>Keep your surroundings clean</li>
+</ul>
+</div>
+
+
+<div class="footer">
+© 2025 Save Environment | All Rights Reserved
+</div>
+
+</body>
+</html>
