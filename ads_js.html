@@ -65,9 +65,13 @@ margin-top:20px;
     </style>
 </head>
 <body>
+    <audio id="s">
+        <source src="audio/a2.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
         var add = document.createElement("div");
+        var s = document.getElementById("s")
 
         function showadd() {
             add.className = "add1style";
@@ -77,7 +81,8 @@ margin-top:20px;
             add.innerHTML = `
                 <button class="close-btn" onclick="closeDialog()">X</button>
                 <img class="popup-img" src="images/a2.gif">
-            `;
+                            `;
+                            s.play()
 
             document.body.appendChild(add);
         }
