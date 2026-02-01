@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Wonders of Nature</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A responsive single-page site celebrating the wonders of nature." />
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="bannerbootstrep.css" />
+</head>
+<body>
+  <!-- Banner / Hero Section -->
+  <header class="banner position-relative">
+    <div id="natureCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Nature image carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mountains slide"></button>
+        <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="1" aria-label="Oceans slide"></button>
+        <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="2" aria-label="Rivers slide"></button>
+        <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="3" aria-label="Desert slide"></button>
+        <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="4" aria-label="Fields slide"></button>
+        <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="5" aria-label="Forests slide"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg"
+               class="d-block w-100 img-fluid"
+               alt="Snowy mountain peaks" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg"
+               class="d-block w-100 img-fluid"
+               alt="Turquoise ocean waves"
+               loading="lazy" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg"
+               class="d-block w-100 img-fluid"
+               alt="River flowing through foggy landscape"
+               loading="lazy" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg"
+               class="d-block w-100 img-fluid"
+               alt="Sand dunes at sunset"
+               loading="lazy" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/278790/pexels-photo-278790.jpeg"
+               class="d-block w-100 img-fluid"
+               alt="Wide open green fields"
+               loading="lazy" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg"
+               class="d-block w-100 img-fluid"
+               alt="Sunlit forest trees"
+               loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#natureCarousel" data-bs-slide="prev" aria-label="Previous slide">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#natureCarousel" data-bs-slide="next" aria-label="Next slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Overlay Text -->
+    <div class="banner-text position-absolute top-50 start-50 translate-middle text-center text-white bg-dark bg-opacity-50 p-3 rounded">
+      <h1 class="display-5 fw-bold">Wonders of Nature</h1>
+      <p class="mb-0">Exploring Earth’s most beautiful landscapes</p>
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <p class="paragraph lead">
+          Nature is a living tapestry woven from countless forms of life, from microscopic organisms to towering trees and roaming animals. Biodiversity strengthens ecosystems by creating balance and resilience, allowing them to adapt to changes such as climate shifts or natural disasters. Forests clean the air, wetlands filter water, and oceans regulate temperature across the planet. Every species plays a role, even those we rarely notice. Protecting this variety of life ensures that natural systems continue to provide food, medicine, and inspiration for future generations.
+        </p>
+      </div>
+      <div class="col-12 col-md-6">
+        <p class="paragraph">
+          Human life is deeply connected to landscapes, whether through farming, travel, or simple moments of reflection. Mountains inspire endurance, rivers teach patience, and open fields remind us of space and possibility. Conservation efforts are not just about saving wildlife; they are about preserving the environments that shape our culture and well-being. By respecting natural resources and learning from nature’s rhythms, people can create a healthier relationship with the Earth and pass on a planet that is both beautiful and livable.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>
