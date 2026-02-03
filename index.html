@@ -1,232 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudeep Mishra | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sudeep Mishra · Portfolio</title>
+  <meta name="description" content="Ultra‑modern, fast, and responsive personal portfolio of Sudeep Mishra." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+     
+    :root{
+      --bg: #0b1020;
+      --bg-soft:#0f1530;
+      --text:#eaf2ff;
+      --muted:#9fb0d7;
+      --brand1:#7c4dff; 
+      --brand2:#00e5ff;  
+      --accent:#22d3ee;  
+      --card:#0f1538cc;  
+      --glass: color-mix(in oklab, #ffffff 6%, transparent);
+      --ring:#7c4dff44;
+      --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444;
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --radius-lg: 22px;
     }
-
-    body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(to right, #c8cbef, #faf9ee, #fbe3e8, #d6f7e4);
-      color: #2c2c54;
-      line-height: 1.6;
+   
+    :root.light{
+      --bg:#f6f8ff; --bg-soft:#ffffff; --text:#0f172a; --muted:#475569;
+      --brand1:#6d28d9; --brand2:#0891b2; --accent:#0ea5e9;
+      --card:#ffffffcc; --glass: color-mix(in oklab, #000 6%, transparent);
+      --ring:#6d28d944; --shadow: 0 18px 40px rgba(2,6,23,.12);
     }
-
-    header {
-      width: 100%;
-      text-align: center;
-      padding: 60px 20px;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6; overflow-x:hidden;
     }
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+    .container{width:min(1120px, 92vw); margin-inline:auto}
 
-    header img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+     .bg{position:fixed; inset:0; z-index:-2; pointer-events:none; background:
+      radial-gradient(1200px 600px at 10% -10%, #7c4dff22, transparent 55%),
+      radial-gradient(1000px 500px at 90% 0%, #00e5ff22, transparent 60%),
+      radial-gradient(1200px 700px at 50% 120%, #00ffc81a, transparent 60%);
+      filter:saturate(1.2);
     }
-
-    header h1 {
-      margin-top: 15px;
-      font-size: 32px;
-      color: #2c2c54;
-      font-weight: 700;
+    .aurora{position:fixed; inset:0; z-index:-1; pointer-events:none; mix-blend-mode:screen; opacity:.6; background:
+      conic-gradient(from 180deg at 70% 20%, #7c4dff22, #00e5ff22, #22c55e22, #7c4dff22);
+      mask: radial-gradient(70% 70% at 50% 30%, #000 55%, transparent 65%);
     }
+    .noise{position:fixed; inset:0; pointer-events:none; z-index:-1; background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity=".04"/></svg>'); mix-blend-mode: soft-light;}
 
-    header p {
-      font-size: 18px;
-      color: #555;
-    }
+     header{position:sticky; top:0; z-index:50; backdrop-filter: blur(14px) saturate(1.2); background: color-mix(in oklab, var(--card) 85%, transparent); border-bottom:1px solid var(--glass)}
+    .nav{display:flex;; align-items:center; justify-content:space-between; gap:12px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+    .brand .logo{inline-size:34px; block-size:34px; border-radius:12px; background:linear-gradient(135deg, var(--brand1), var(--brand2)); box-shadow:inset 0 0 0 2px #ffffff20, var(--shadow)}
+    .nav a{opacity:.9; padding:10px 12px; border-radius:10px}
+    .nav a:hover{background: color-mix(in oklab, var(--ring) 45%, transparent)}
+    .nav-right{display:flex; align-items:center; gap:6px}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--glass); background:linear-gradient(180deg, color-mix(in oklab, var(--bg-soft) 80%, transparent), color-mix(in oklab, var(--bg) 80%, transparent)); cursor:pointer; transition:.25s transform, .25s box-shadow; font-weight:600}
+    .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg, var(--brand1), var(--brand2)); border:none; color:white}
+    .btn.ghost{background:transparent}
 
-    nav {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+     section{padding:80px 0}
+    .section-title{font-size: clamp(28px, 4.6vw, 40px); margin-bottom:10px}
+    .section-sub{color:var(--muted); margin-bottom:26px}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 15px 0;
-    }
+     .hero{padding:clamp(52px, 7vw, 110px) 0 40px}
+    .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:40px; align-items:center}
+    .kicker{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; font-size:12px; border:1px solid var(--glass); background: color-mix(in oklab, var(--ring) 30%, transparent)}
+    .title{font-size: clamp(42px, 7.5vw, 76px); line-height:1.04; font-weight:900; letter-spacing:-.02em; margin:12px 0 10px;}
+    .glow{background:linear-gradient(90deg, var(--brand1), var(--brand2)); -webkit-background-clip:text; background-clip:text; color:transparent; text-shadow:0 0 60px #7c4dff55}
+    .type{border-right:2px solid currentColor; animation: caret 1s steps(1) infinite}
+    @keyframes caret{50%{border-right-color: transparent}}
+    .subtitle{font-size: clamp(16px, 2.6vw, 20px); color:var(--muted)}
+    .hero-cta{display:flex; gap:12px; margin-top:24px; flex-wrap:wrap}
+    .card{border-radius:var(--radius-lg); background:var(--card); padding:18px; border:1px solid var(--glass); box-shadow: var(--shadow)}
+    .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px}
+    .stat{padding:14px; border-radius:16px; background: color-mix(in oklab, var(--bg-soft) 68%, transparent); border:1px solid var(--glass); text-align:center}
+    .stat b{font-size:22px}
 
-    nav ul li {
-      margin: 0 20px;
-    }
+     
+    .about{display:grid; grid-template-columns:.9fr 1.1fr; gap:24px; align-items:center}
+    .card.profile{display:grid; grid-template-columns:96px 1fr; gap:14px; align-items:center}
+    .avatar{inline-size:96px; block-size:96px; border-radius:22px; background:linear-gradient(135deg, var(--brand1), var(--brand2)); display:grid; place-items:center; font-weight:800; font-size:26px; color:#fff}
+    .avatar-img{
+  inline-size:96px;
+  block-size:96px;
+  border-radius:22px;
+  object-fit:cover;
+  border:2px solid var(--glass);
+  box-shadow: var(--shadow);
+}
 
-    nav ul li a {
-      text-decoration: none;
-      color: #2c2c54;
-      font-weight: 600;
-      transition: 0.3s;
-      padding: 8px 12px;
-      border-radius: 6px;
-    }
+    .counters{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .counter{padding:14px; border-radius:16px; background: color-mix(in oklab, var(--bg-soft) 68%, transparent); border:1px solid var(--glass); text-align:center}
+    .counter b{font-size:22px}
 
-    nav ul li a:hover {
-      background: #eeeffa;
-      color: #4a69bd;
-    }
+    
+    .skills{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:16px}
+    .skill{background:var(--card); border:1px solid var(--glass); border-radius:18px; padding:16px; position:relative; overflow:hidden}
+    .skill h4{margin:0 0 8px}
+    .meter{height:10px; border-radius:999px; background: color-mix(in oklab, var(--bg) 85%, transparent); overflow:hidden; border:1px solid var(--glass)}
+    .bar{height:100%; width:0; background: linear-gradient(90deg, var(--brand1), var(--brand2))}
 
-    section {
-      width: 90%;
-      max-width: 1100px;
-      margin: 60px auto;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
+    
+    .achievements{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px}
+    .award{padding:18px; border-radius:18px; background:var(--card); border:1px solid var(--glass); display:grid; gap:8px}
 
-    section h2 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 25px;
-      color: #2c2c54;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+   
+    .grid{display:grid; grid-template-columns:repeat(12, 1fr); gap:16px}
+    .project{grid-column: span 4; background:var(--card); border:1px solid var(--glass); border-radius:22px; overflow:hidden; transition:transform .25s, box-shadow .25s}
+    .project:hover{transform:translateY(-4px); box-shadow: var(--shadow)}
+    .project-img{
+  width:100%; height:100%; object-fit:cover; } 
+  .project-img{ width:100%; height:100%; object-fit:cover; }
 
-    section p {
-      text-align: justify;
-      font-size: 17px;
-      color: #333;
-    }
 
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
 
-    .portfolio-item {
-      background: #fcfcf6;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
 
-    .portfolio-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-    }
+    .cover{aspect-ratio:16/10; background: linear-gradient(135deg, #1f2937, #0b1020); position:relative; display:grid; place-items:center}
+    .cover .tag{position:absolute; top:10px; left:10px; font-size:12px; padding:6px 10px; border-radius:999px; background: color-mix(in oklab, var(--bg-soft) 70%, transparent); border:1px solid var(--glass)}
+    .project h3{margin:14px 16px 6px}
+    .project p{margin:0 16px 14px; color:var(--muted)}
+    .project .meta{display:flex; justify-content:space-between; gap:10px; align-items:center; padding:12px 16px; border-top:1px solid var(--glass)}
 
-    .portfolio-item img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
+    .timeline{position:relative; margin:24px 0}
+    .timeline::before{content:""; position:absolute; left:14px; top:0; bottom:0; width:2px; background: color-mix(in oklab, var(--text) 20%, transparent)}
+    .t-item{position:relative; margin-left:42px; margin-bottom:18px; padding:14px 16px; border-radius:16px; background:var(--card); border:1px solid var(--glass)}
+    .t-item::before{content:""; position:absolute; left:-30px; top:18px; width:10px; height:10px; border-radius:999px; background:linear-gradient(135deg, var(--brand1), var(--brand2)); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring) 55%, transparent)}
 
-    .contact-info {
-      text-align: center;
-      line-height: 1.8;
-    }
+   
+    form{display:grid; gap:12px}
+    input, textarea{padding:12px 14px; border-radius:12px; border:1px solid var(--glass); background: color-mix(in oklab, var(--bg-soft) 70%, transparent); color:var(--text)}
+    textarea{min-height:120px; resize:vertical}
 
-    .contact-info a {
-      color: #2c2c54;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    footer{padding:34px 0; color:var(--muted)}
+    .foot{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; border-top:1px solid var(--glass); padding-top:18px}
 
-    .contact-info a:hover {
-      color: #4a69bd;
-    }
+    
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .muted{color:var(--muted)}
+    .hide{display:none !important}
 
-    footer {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 25px;
-      text-align: center;
-      color: #2c2c54;
-      font-size: 15px;
-      border-top: 2px solid #ddd;
-      font-size: larger;  
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 26px;
-      }
-      section {
-        padding: 25px;
-      }
+   
+    @media (max-width: 980px){ .hero-grid{grid-template-columns: 1fr} .about{grid-template-columns:1fr} .project{grid-column: span 6} }
+    @media (max-width: 640px){ .project{grid-column: span 12} } 
+    
+    @media (prefers-reduced-motion: no-preference){
+      .reveal{opacity:0; transform: translateY(16px); transition: .6s opacity, .6s transform}
+      .reveal.is-visible{opacity:1; transform:none}
     }
   </style>
 </head>
 <body>
+  <div class="bg"></div>
+  <div class="aurora"></div>
+  <div class="noise"></div>
 
-  <header id="home">
-    <img src="images/p6.png" alt="Sudeep Mishra">
-    <h1>Sudeep Mishra</h1>
-    <p>Digital Marketing Student</p>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Sudeep Mishra</span>
+      </a>
+      <nav class="row" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="https://www.behance.net/sudeepmishra23">Behance</a>
+        <a href="practice.html">Practice</a>
+        <a href="web_projects.html">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button id="themeToggle" class="btn ghost" aria-pressed="false" aria-label="Toggle theme">🌗</button>
+        <a class="btn primary" href="#contact">Hire Me</a>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="practice.html">Practice</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm <b>Sudeep Mishra</b>, a passionate <b>Digital Marketing Student</b> with a creative mindset and a drive for innovation. 
-      I enjoy exploring branding, social media strategies, and content marketing that connect brands with their audiences in meaningful ways. 
-      My goal is to keep learning, creating, and building experiences that inspire growth.
+  <main id="home" class="container">
+     <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="kicker">Graphic Designer · Front‑End Learner · Digital Marketing (pursuing)</span>
+          <h1 class="title reveal">Hi, I’m <span class="glow">Sudeep Mishra</span><br><span id="typewrite" class="type"></span></h1>
+          <p class="subtitle reveal">Bilingual communicator (Hindi & English). Adaptable under pressure. I love learning and building beautiful, fast experiences.</p>
+          <div class="hero-cta reveal">
+            <a class="btn primary" href="#contact">Hire Me</a>
+            <a class="btn" href="#" id="downloadCV">Download CV</a>
+          </div>
+          <div class="stats reveal">
+            <div class="stat"><b>website design</b><br><span class="muted">First Prize Awards 3x</span></div>
+            <div class="stat"><b>Graphic design</b><br><span class="muted">First Prize Awards 1x</span></div>
+            <div class="stat"><b>Hindi/English</b><br><span class="muted">Bilingual</span></div>
+            <div class="stat"><b>Always</b><br><span class="muted">Learning</span></div>
+          </div>
+        </div>
+       <div class="card profile reveal">
+  <img src="images/p6.png" alt="Sudeep Mishra" class="avatar-img">
+  <div>
+    <h3 style="margin:0 0 6px">About me</h3>
+    <p class="muted" style="margin:0">
+      DOB: <b>24/01/2005</b> · Pursuing <b>BA Program</b> and a <b>Diploma in Digital Marketing</b>. Passionate about design, web, and storytelling.
     </p>
-  </section>
+  </div>
+</div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="portfolio-grid">
-      <a href="https://www.behance.net/sudeepmishra23"  class="portfolio-item">
-        <img src="images/p42.jpg" alt="Graphic Designing">
-        <p>GRAPHIC DESIGNING</p>
-      </a>
+      </div>
+    </section>
 
-      <a href="#"  class="portfolio-item">
-        <img src="images/P43.jpg" alt="Video Editing">
-        <p>VIDEO EDITING</p>
-      </a>
+     <section id="about">
+      <h2 class="section-title reveal">About</h2>
+      <p class="section-sub reveal">A curious designer‑developer who enjoys exploring new tech and delivering clean visuals.</p>
+      <div class="about">
+        <div class="card reveal">
+          <h3 style="margin-top:0">Profile</h3>
+          <ul style="margin:10px 0 0; padding-left:18px">
+            <li><b>Name:</b> Sudeep Mishra</li>
+            <li><b>Date of Birth:</b> 24/01/2005</li>
+            <li><b>Languages:</b> Hindi, English</li>
+            <li><b>Focus:</b> Graphic Design, HTML/CSS, Learning JavaScript</li>
+            <li><b>Strengths:</b> Adaptability, Communication, Problem‑solving</li>
+          </ul>
+        </div>
+        <div class="counters">
+          <div class="counter reveal"><b data-count="4">0</b><br><span class="muted">First Prizes</span></div>
+          <div class="counter reveal"><b data-count="95">0</b><br><span class="muted">Comm. (Hi/En)%</span></div>
+          <div class="counter reveal"><b data-count="100">0</b><br><span class="muted">Adaptability%</span></div>
+        </div>
+      </div>
+    </section>
 
-      <a href="web_projects.html" class="portfolio-item">
-        <img src="images/p61.jpg" alt="web_projects">
-        <p>Web Projects</p>
-      </a>
-    </div>
-  </section>
+     <section id="skills">
+      <h2 class="section-title reveal">Skills</h2>
+      <p class="section-sub reveal">Visual craft + web fundamentals, with growing JS skills.</p>
+      <div class="skills">
+        <div class="skill reveal"><h4>Graphic Designing</h4><div class="meter" aria-label="Graphic Design"><div class="bar" style="--pct:90%"></div></div></div>
+        <div class="skill reveal"><h4>HTML/CSS</h4><div class="meter" aria-label="HTML CSS"><div class="bar" style="--pct:90%"></div></div></div>
+        <div class="skill reveal"><h4>JavaScript (Learning)</h4><div class="meter" aria-label="JavaScript"><div class="bar" style="--pct:60%"></div></div></div>
+        <div class="skill reveal"><h4>Digital Marketing</h4><div class="meter" aria-label="Digital Marketing"><div class="bar" style="--pct:75%"></div></div></div>
+        <div class="skill reveal"><h4>Communication (Hi/En)</h4><div class="meter" aria-label="Communication"><div class="bar" style="--pct:95%"></div></div></div>
+        <div class="skill reveal"><h4>Adaptability</h4><div class="meter" aria-label="Adaptability"><div class="bar" style="--pct:100%"></div></div></div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:sudeepmisha023@gmail.com">sudeepmisha023@gmail.com</a></p>
-      <p>Behance: <a href="https://www.behance.net/sudeepmishra23" target="_blank">behance.net/sudeepmishra23</a></p>
-      <p>Phone: +91 1234567890</p>
-    </div>
-  </section>
+     <section id="achievements">
+      <h2 class="section-title reveal">Achievements</h2>
+      <div class="achievements">
+        <div class="award reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l2.39 4.84 5.34.78-3.86 3.76.91 5.32L12 14.77 6.22 16.7l.91-5.32L3.27 7.62l5.34-.78L12 2z" stroke="currentColor"/></svg>
+          <b>First Prize — Graphic Designing</b>
+          <span class="muted">Artist of the Month Competition</span>
+        </div>
+        <div class="award reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l2.39 4.84 5.34.78-3.86 3.76.91 5.32L12 14.77 6.22 16.7l.91-5.32L3.27 7.62l5.34-.78L12 2z" stroke="currentColor"/></svg>
+          <b>First Prize — HTML/CSS/javaScript 3x</b>
+          <span class="muted">Artist of the Month Competition</span>
+        </div>
+      </div>
+    </section>
+
+     <section id="projects">
+  <h2 class="section-title reveal">Projects</h2>
+  <p class="section-sub reveal">Sample work with hover effects and details modal.</p>
+
+  <div class="grid" id="projectGrid" aria-live="polite">
+
+     
+     <article class="project reveal" data-project="Brand Kit">
+      <div class="cover">
+        <span class="tag">Design · Identity</span>
+       
+       <img src="images/p70.png" alt="Brand Kit Project" class="project-img"> </a>
+      </div>
+      <h3>Brand Kit</h3>
+      <p>Logo, palette, and components for a startup rebrand.</p>
+      <div class="meta">
+        <span class="muted">Design System</span>
+        <button class="btn" data-open>Details</button>
+      </div>
+    </article> 
+  
+
+     <article class="project reveal" data-project="Landing Page">
+      <div class="cover">
+        <span class="tag">HTML · CSS</span>
+        <img src="images/p71.png" alt="Landing Page Project" class="project-img">
+      </div>
+      <h3>Landing Page</h3>
+      <p>High-conversion page with a/b tested hero and assets.</p>
+      <div class="meta">
+        <span class="muted">Website</span>
+        <button class="btn" data-open>Details</button>
+      </div>
+    </article>
+
+    
+
+     <article class="project reveal" data-project="Promo Graphics">
+      <div class="cover">
+        <span class="tag">Graphics · Social</span>
+        <img src="images/p72.png" alt="Promo Graphics Project" class="project-img">
+      </div>
+      <h3>Promo Graphics</h3>
+      <p>Social media creatives and campaign visuals.</p>
+      <div class="meta">
+        <span class="muted">Design</span>
+        <button class="btn" data-open>Details</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+      <section id="education">
+      <h2 class="section-title reveal">Education</h2>
+      <p class="section-sub reveal">Formal education with continuous self‑learning.</p>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <b>BA Program</b>
+          <div class="muted">Ongoing</div>
+          <ul><li>Building strong communication and analytical skills.</li></ul>
+        </div>
+        <div class="t-item reveal">
+          <b>Diploma in Digital Marketing</b>
+          <div class="muted">Ongoing</div>
+          <ul><li>SEO, social strategy, branding, and storytelling.</li></ul>
+        </div>
+        <div class="t-item reveal">
+          <b>Self‑Learning — Web Dev & JavaScript</b>
+          <div class="muted">Current</div>
+          <ul><li>ES6+, DOM, UX patterns, and project‑based learning.</li></ul>
+        </div>
+      </div>
+    </section>
+
+     <section id="contact">
+      <h2 class="section-title reveal">Let’s build something</h2>
+      <p class="section-sub reveal">Tell me about your project. I usually reply within 24 hours.</p>
+      <form class="reveal" id="contactForm" novalidate>
+        <div class="row">
+          <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+          <input type="email" name="email" placeholder="Email" autocomplete="email" required />
+        </div>
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <div class="row">
+          <button class="btn primary" type="submit">Send message</button>
+          <span id="formStatus" class="muted" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <b>Sudeep Mishra</b>
+    <div class="container foot">
+      <div class="row">
+        <div class="logo" aria-hidden="true" style="inline-size:28px; block-size:28px; border-radius:8px; background:linear-gradient(135deg, var(--brand1), var(--brand2));"></div>
+        <div>
+          <b>Sudeep Mishra</b>
+          <div class="muted">© <span id="year"></span> · All rights reserved</div>
+        </div>
+      </div>
+      <div class="row"><a class="btn ghost" href="#home">Back to top ↑</a></div>
+    </div>
   </footer>
 
+   <dialog id="projectModal" style="border:none; border-radius:20px; padding:0; max-width:min(720px, 92vw); background:var(--bg-soft); color:var(--text); box-shadow:var(--shadow)">
+    <div style="padding:18px 18px 0; display:flex; justify-content:space-between; align-items:center; gap:12px; border-bottom:1px solid var(--glass)">
+      <h3 id="modalTitle" style="margin:0">Project</h3>
+      <button class="btn ghost" id="closeModal" aria-label="Close">✕</button>
+    </div>
+    <div style="padding:16px">
+      <p id="modalBody" class="muted" style="margin-top:0">Loading…</p>
+      <div class="row">
+        <a class="btn" id="modalLive" href="#" target="_blank" rel="noopener">Live</a>
+        <a class="btn" id="modalCode" href="#" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+  
+    const CONTACT_EMAIL = 'sudeep.contact@example.com';  
+
+     
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme){ root.classList.toggle('light', savedTheme === 'light'); themeToggle.setAttribute('aria-pressed', savedTheme === 'light'); }
+    themeToggle.addEventListener('click', ()=>{
+      root.classList.toggle('light');
+      const isLight = root.classList.contains('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      themeToggle.setAttribute('aria-pressed', isLight);
+    });
+
+    
+    const typeEl = document.getElementById('typewrite');
+    const phrases = ['Graphic Designer', 'Front‑End Learner', 'Digital Marketing Student'];
+    let pi = 0, ci = 0, erase = false;
+    function typeLoop(){
+      const p = phrases[pi];
+      typeEl.textContent = p.slice(0, ci);
+      if(!erase){ ci++; if(ci>p.length+8) erase = true; }
+      else { ci--; if(ci<=0){ erase=false; pi=(pi+1)%phrases.length; } }
+      setTimeout(typeLoop, erase?60:90);
+    }
+    typeLoop();
+
+    
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    
+    const bars = document.querySelectorAll('.bar');
+    const barIO = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.style.width = getComputedStyle(e.target).getPropertyValue('--pct') || '90%'; barIO.unobserve(e.target); } });
+    }, { threshold: 0.4 });
+    bars.forEach(b => barIO.observe(b));
+
+     
+    const counters = document.querySelectorAll('[data-count]');
+    const cIO = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          const el = e.target; const target = +el.dataset.count; let n = 0;
+          const step = Math.max(1, Math.round(target / 60));
+          const t = setInterval(()=>{ n += step; if(n >= target){ n = target; clearInterval(t);} el.textContent = n; }, 20);
+          cIO.unobserve(el);
+        }
+      });
+    }, { threshold: .6 });
+    counters.forEach(el => cIO.observe(el));
+
+     
+    const details = {
+      'Brand Kit': { body: 'A complete identity kit: logo, palette, typography, and reusable components for a fast brand rollout.', live: '#', code:'#' },
+      'Landing Page': { body: 'High‑performance product landing page with polished hero, responsive sections, and forms.', live: '#', code:'#' },
+      'Portfolio Grid': { body: 'A gallery UI with hover states, filters, and modal previews. Built for clarity and speed.', live: '#', code:'#' },
+      'Promo Graphics': { body: 'Campaign graphics for social media — carousels, banners, and stories with consistent branding.', live: '#', code:'#' }
+    };
+    const grid = document.getElementById('projectGrid');
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    const modalLive = document.getElementById('modalLive');
+    const modalCode = document.getElementById('modalCode');
+    const closeModal = document.getElementById('closeModal');
+
+    grid.addEventListener('click', (e)=>{
+      const card = e.target.closest('[data-project]');
+      if(!card) return;
+      const key = card.getAttribute('data-project');
+      const d = details[key];
+      if(!d) return;
+      modalTitle.textContent = key;
+      modalBody.textContent = d.body;
+      modalLive.href = d.live;
+      modalCode.href = d.code;
+      if(typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open','true');
+    });
+    closeModal.addEventListener('click', ()=> modal.close());
+    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && modal.open) modal.close(); });
+
+    
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = String(data.get('name')||'').trim();
+      const email = String(data.get('email')||'').trim();
+      const subject = String(data.get('subject')||'').trim();
+      const message = String(data.get('message')||'').trim();
+      if(!name || !email || !subject || !message){ status.textContent = 'Please fill all fields.'; status.style.color = 'var(--warn)'; return; }
+      const mail = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(name + ' <' + email + '>' + '\n\n' + message)}`;
+      status.textContent = 'Opening your email app…'; status.style.color='';
+      window.location.href = mail;
+    });
+
+    
+    document.getElementById('downloadCV').addEventListener('click', (e)=>{
+      e.preventDefault();
+      const cv = [
+        'Sudeep Mishra',
+        'Graphic Designer · Front‑End Learner',
+        '',
+        'DOB: 24/01/2005',
+        'Education: BA Program (pursuing), Diploma in Digital Marketing (pursuing)',
+        'Languages: Hindi, English',
+        'Skills: Graphic Designing, HTML/CSS, JavaScript (Learning), Digital Marketing',
+        'Awards: First Prize (Graphic Design), First Prize (HTML/CSS)',
+        '',
+        'Contact: ' + CONTACT_EMAIL
+      ].join('\n');
+      const blob = new Blob([cv], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Sudeep-Mishra-CV.txt'; a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

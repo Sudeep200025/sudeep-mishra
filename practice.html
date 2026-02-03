@@ -1,314 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practice Page | Sudeep Mishra</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Page | Sudeep Mishra</title>
 
-    body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(to right, #c8cbef, #faf9ee, #fbe3e8, #d6f7e4);
-      color: #2c2c54;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-    header {
-      width: 100%;
-      text-align: center;
-      padding: 60px 20px;
-    }
+<style>
+:root{
+  --bg:#0b1020;
+  --bg-soft:#0f1530;
+  --text:#eaf2ff;
+  --muted:#9fb0d7;
+  --brand1:#7c4dff;
+  --brand2:#00e5ff;
+  --card:#0f1538cc;
+  --glass: color-mix(in oklab, #ffffff 6%, transparent);
+  --ring:#7c4dff44;
+  --shadow:0 20px 60px rgba(0,0,0,.35);
+  --radius:18px;
+}
 
-    header h1 {
-      font-size: clamp(24px, 5vw, 36px);
-      color: #2c2c54;
-      font-weight: 700;
-    }
-    nav {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Inter,system-ui;
+  background:var(--bg);
+  color:var(--text);
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 15px 10px;
-      transition: 0.3s ease;
-    }
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
 
-    nav ul li {
-      margin: 8px 15px;
-    }
+.bg{
+  position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #7c4dff22, transparent 55%),
+    radial-gradient(1000px 500px at 90% 0%, #00e5ff22, transparent 60%);
+}
 
-    nav ul li a {
-      text-decoration: none;
-      color: #2c2c54;
-      font-weight: 600;
-      transition: 0.3s;
-      padding: 8px 12px;
-      border-radius: 6px;
-      display: inline-block;
-    }
+header{text-align:center;padding:70px 20px}
+header h1{font-size:clamp(28px,5vw,42px)}
 
-    nav ul li a:hover {
-      background: #eeeffa;
-      color: #4a69bd;
-    }
+nav{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter: blur(12px);
+  background:var(--card);
+  border-bottom:1px solid var(--glass);
+}
 
-    nav ul li a.active {
-      background: #4a69bd;
-      color: white;
-    }
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:14px;
+  gap:10px;
+}
 
-    section {
-      width: 90%;
-      max-width: 1100px;
-      margin: 60px auto;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      transition: 0.3s ease;
-    }
+nav a{
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:600;
+}
+nav a:hover{background:var(--ring)}
+nav a.active{background:linear-gradient(135deg,var(--brand1),var(--brand2));color:#fff}
 
-    section h2 {
-      text-align: center;
-      font-size: clamp(20px, 3vw, 28px);
-      margin-bottom: 25px;
-      color: #2c2c54;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+section{
+  width:min(1100px,92vw);
+  margin:60px auto;
+  background:var(--card);
+  padding:40px;
+  border-radius:var(--radius);
+  border:1px solid var(--glass);
+  box-shadow:var(--shadow);
+}
 
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
+section h2{
+  text-align:center;
+  margin-bottom:30px;
+  letter-spacing:1px;
+}
 
-    .portfolio-item {
-      display: block;
-      background: #fcfcf6;
-      border-radius: 12px;
-      overflow: hidden;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
 
-    .portfolio-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+.portfolio-item{
+  background:var(--bg-soft);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:.3s;
+}
+.portfolio-item:hover{transform:translateY(-6px)}
 
-    .portfolio-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+.portfolio-item img{
+  height:200px;
+  object-fit:cover;
+}
 
-    .portfolio-item p {
-      margin: 15px 0;
-      font-weight: 600;
-      color: #2c2c54;
-      letter-spacing: 0.5px;
-    }
+.portfolio-item p{
+  padding:14px;
+  text-align:center;
+  font-weight:600;
+}
 
-    footer {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 25px;
-      text-align: center;
-      color: #2c2c54;
-      font-size: 15px;
-      border-top: 2px solid #ddd;
-      font-size: larger;
-      margin-top: 60px;
-    }
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+  border-top:1px solid var(--glass);
+}
+footer a{color:var(--text)}
+footer a:hover{color:var(--brand2)}
 
-    footer a {
-      color: #2c2c54;
-      text-decoration: none;
-      transition: 0.3s;
-      font-weight: 600;
-    }
-
-    footer a:hover {
-      color: #4a69bd;
-      background: #eeeffa;
-      border-radius: 5px;
-      padding: 3px 6px;
-    }
-
-
-    @media (max-width: 768px) {
-      header {
-        padding: 40px 10px;
-      }
-      section {
-        padding: 25px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      section {
-        width: 95%;
-        margin: 40px auto;
-      }
-      .portfolio-item img {
-        height: 180px;
-      }
-    }
-  </style>
+@media(max-width:600px){
+  section{padding:24px}
+  .portfolio-item img{height:160px}
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Practice Page</h1>
-  </header>
+<div class="bg"></div>
 
+<header>
+  <h1>Practice Page</h1>
+</header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="https://www.behance.net/sudeepmishra23" target="_blank">Behance</a></li>
-      <li><a href="web_projects.html">Project Work</a></li>
-      <li><a href="#" class="active">Practice Page</a></li>
-    </ul>
-  </nav>
+<nav>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="https://www.behance.net/sudeepmishra23" target="_blank">Behance</a></li>
+  <li><a href="web_projects.html">Project Work</a></li>
+  <li><a href="#" class="active">Practice Page</a></li>
+</ul>
+</nav>
 
-  <section id="practice">
-    <h2>HTML Practice</h2>
-    <div class="portfolio-grid">
+<section>
+<h2>HTML Practice</h2>
+<div class="portfolio-grid">
+<a href="index.html" class="portfolio-item"><img src="images/p51.png"><p>HOME PAGE</p></a>
+<a href="list.html" class="portfolio-item"><img src="images/p50.jpg"><p>LIST IN HTML</p></a>
+<a href="Illustration.html" class="portfolio-item"><img src="images/p54.jpeg"><p>ADDING IMAGES</p></a>
+<a href="shopping.html" class="portfolio-item"><img src="images/P45.jpg"><p>SHOPPING PAGE</p></a>
+<a href="indian history.html" class="portfolio-item"><img src="images/p47.png"><p>ADS IN HTML</p></a>
+<a href="banner.html" class="portfolio-item"><img src="images/p41.jpg"><p>BANNER</p></a>
+<a href="Table.html" class="portfolio-item"><img src="images/p48.png"><p>TABLE</p></a>
+<a href="animation.html" class="portfolio-item"><img src="images/p49.gif"><p>ANIMATION</p></a>
+<a href="audio.html" class="portfolio-item"><img src="images/p52.png"><p>AUDIO</p></a>
+<a href="iframe.html" class="portfolio-item"><img src="images/p53.png"><p>IFRAME</p></a>
+<a href="login.html" class="portfolio-item"><img src="images/p56.jpg"><p>LOGIN</p></a>
+<a href="register.html" class="portfolio-item"><img src="images/p57.jpg"><p>REGISTER</p></a>
+<a href="drawing.html" class="portfolio-item"><img src="images/p58.jpeg"><p>DRAWING</p></a>
+</div>
+</section>
 
-      <a href="index.html" class="portfolio-item">
-        <img src="images/p51.png" alt="Home Page">
-        <p>HOME PAGE</p>
-      </a>
+<section>
+<h2>JavaScript Practice</h2>
+<div class="portfolio-grid">
+<a href="firstJS.html" class="portfolio-item"><img src="images/p59.jpg"><p>First JS</p></a>
+<a href="Creating_tag.html" class="portfolio-item"><img src="images/p60.png"><p>Creating Tag</p></a>
+<a href="grtElement.html" class="portfolio-item"><img src="images/p62.jpg"><p>Manipulating Tag</p></a>
+<a href="ads_js.html" class="portfolio-item"><img src="images/p63.jpg"><p>Ads in JS</p></a>
+<a href="redirection.html" class="portfolio-item"><img src="images/p64.jpg"><p>Redirection</p></a>
+<a href="table_app.html" class="portfolio-item"><img src="images/p65.png"><p>Table App</p></a>
+</div>
+</section>
 
-      <a href="list.html" class="portfolio-item">
-        <img src="images/p50.jpg" alt="List in HTML">
-        <p>LIST IN HTML</p>
-      </a>
+<section>
+<h2>Bootstrap Practice</h2>
+<div class="portfolio-grid">
+<a href="bootsrap.html" class="portfolio-item"><img src="images/p67.png"><p>Bootstrap Page</p></a>
+<a href="bannerinbootstrap.html" class="portfolio-item"><img src="images/p68.jpg"><p>Bootstrap Banner</p></a>
+</div>
+</section>
 
-      <a href="Illustration.html" class="portfolio-item">
-        <img src="images/p54.jpeg" alt="Adding Images in HTML">
-        <p>ADDING IMAGES</p>
-      </a>
-
-      <a href="shopping.html" class="portfolio-item">
-        <img src="images/P45.jpg" alt="Shopping Page">
-        <p>SHOPPING PAGE</p>
-      </a>
-
-      <a href="indian history.html" class="portfolio-item">
-        <img src="images/p47.png" alt="Ads in HTML">
-        <p>ADS IN HTML</p>
-      </a>
-
-      <a href="banner.html" class="portfolio-item">
-        <img src="images/p41.jpg" alt="Banner">
-        <p>BANNER</p>
-      </a>
-
-      <a href="Table.html" class="portfolio-item">
-        <img src="images/p48.png" alt="Table">
-        <p>TABLE</p>
-      </a>
-
-      <a href="animation.html" class="portfolio-item">
-        <img src="images/p49.gif" alt="Animation">
-        <p>ANIMATION</p>
-      </a>
-      <a href="audio.html" class="portfolio-item">
-        <img src="images/p52.png" alt="audio">
-        <p>Audio</p>
-      </a>
-      <a href="iframe.html" class="portfolio-item">
-        <img src="images/p53.png" alt="iframe">
-        <p>iframe</p>
-      </a>
-      <a href="login.html" class="portfolio-item">
-        <img src="images/p56.jpg" alt="Login page">
-        <p>Login page</p>
-      </a>
-      <a href="register.html" class="portfolio-item">
-        <img src="images/p57.jpg" alt="Registration form">
-        <p>Registration form</p>
-      </a>
-      <a href="drawing.html" class="portfolio-item">
-        <img src="images/p58.jpeg" alt="Registration form">
-        <p>Drawing in HTML</p>
-      </a>
-
-    </div>
-  </section>
-   <section id="practice">
-    <h2>JavaScript Practice</h2>
-    <div class="portfolio-grid">
-
-      <a href="firstJS.html" class="portfolio-item">
-        <img src="images/p59.jpg" alt="First JavaScript page">
-        <p>first JavaScript page</p>
-      </a>
-
-       <a href="Creating_tag.html" class="portfolio-item">
-        <img src="images/p60.png" alt="Creating_tag">
-        <p>Creating_tag</p>
-      </a>
-       <a href="grtElement.html" class="portfolio-item">
-        <img src="images/p62.jpg" alt="getElement">
-        <p> Manipulating tag function </p>
-      </a>
-       <a href="ads_js.html" class="portfolio-item">
-        <img src="images/p63.jpg" alt="ads by js">
-        <p> Ads in JavaScript </p>
-      </a>
-         <a href="redirection.html" class="portfolio-item">
-        <img src="images/p64.jpg" alt="redirection">
-        <p> Redirection </p>
-      </a>
-         <a href="table_app.html" class="portfolio-item">
-        <img src="images/p65.png" alt="ads by js">
-        <p>Table </p>
-      </a>
-    </div>
-  </section>
-     <section id="practice">
-    <h2>bootstrap practice</h2>
-    <div class="portfolio-grid">
-
-      <a href="bootsrap.html" class="portfolio-item">
-        <img src="images/p67.png" alt="First bootsrap page">
-        <p>First Bootsrap Page</p>
-      </a>
-        <a href="bannerinbootstrap.html" class="portfolio-item">
-        <img src="images/p68.jpg" alt="First bootsrap page">
-        <p>Banner In Bootsrap</p>
-      </a>
-
-    </div>
-  </section>
-
-
-  <footer>
-    <b>Sudeep Mishra</b> | 
-    <a href="mailto:sudeepmisha023@gmail.com">sudeepmisha023@gmail.com</a> |
-    <a href="https://www.behance.net/sudeepmishra23" target="_blank">Behance</a>
-  </footer>
+<footer>
+<b>Sudeep Mishra</b> |
+<a href="mailto:sudeepmisha023@gmail.com">sudeepmisha023@gmail.com</a> |
+<a href="https://www.behance.net/sudeepmishra23" target="_blank">Behance</a>
+</footer>
 
 </body>
 </html>
