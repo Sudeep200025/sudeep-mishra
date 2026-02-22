@@ -154,6 +154,122 @@
     @media (prefers-reduced-motion: no-preference){
       .reveal{opacity:0; transform: translateY(16px); transition: .6s opacity, .6s transform}
       .reveal.is-visible{opacity:1; transform:none}
+      
+@media (max-width: 900px){
+  .nav{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+  }
+
+  .nav nav{
+    justify-content:center;
+    width:100%;
+  }
+
+  .nav-right{
+    width:100%;
+    justify-content:center;
+  }
+
+  .nav a{
+    font-size:14px;
+    padding:8px 10px;
+  }
+}
+
+@media (max-width: 768px){
+  .hero{
+    padding-top:40px;
+  }
+
+  .title{
+    font-size: clamp(30px, 8vw, 48px);
+    text-align:center;
+  }
+
+  .subtitle{
+    text-align:center;
+    font-size:16px;
+  }
+
+  .hero-cta{
+    justify-content:center;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .stat{
+    padding:12px;
+  }
+}
+
+@media (max-width: 768px){
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .counters{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 640px){
+  .skills{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 992px){
+  .project{
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 640px){
+  .project{
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 768px){
+  form .row{
+    flex-direction:column;
+    width:100%;
+  }
+
+  input, textarea{
+    width:100%;
+  }
+}
+
+@media (max-width: 700px){
+  .foot{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+body{
+  overflow-x:hidden;
+}
+
+@media (max-width: 480px){
+  section{
+    padding:60px 0;
+  }
+
+  .container{
+    width:94vw;
+  }
+
+  .btn{
+    width:100%;
+    justify-content:center;
+  }
+}
     }
   </style>
 </head>
@@ -276,7 +392,7 @@
       <div class="cover">
         <span class="tag">Design · Identity</span>
        
-       <img src="images/p70.png" alt="Brand Kit Project" class="project-img"> </a>
+       <img src="images/p71.png" alt="Brand Kit Project" class="project-img"> </a>
       </div>
       <h3>Brand Kit</h3>
       <p>Logo, palette, and components for a startup rebrand.</p>
@@ -290,7 +406,7 @@
      <article class="project reveal" data-project="Landing Page">
       <div class="cover">
         <span class="tag">HTML · CSS</span>
-        <img src="images/p71.png" alt="Landing Page Project" class="project-img">
+        <img src="images/p72.png" alt="Landing Page Project" class="project-img">
       </div>
       <h3>Landing Page</h3>
       <p>High-conversion page with a/b tested hero and assets.</p>
@@ -305,7 +421,7 @@
      <article class="project reveal" data-project="Promo Graphics">
       <div class="cover">
         <span class="tag">Graphics · Social</span>
-        <img src="images/p72.png" alt="Promo Graphics Project" class="project-img">
+        <img src="images/p70.png" alt="Promo Graphics Project" class="project-img">
       </div>
       <h3>Promo Graphics</h3>
       <p>Social media creatives and campaign visuals.</p>
