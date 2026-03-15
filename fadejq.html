@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Fade Methods Example</title>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#121212;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+}
+
+.box{
+    width:150px;
+    height:150px;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+.box1{background:#ff4d4d;}
+.box2{background:#28a745;}
+.box3{background:#0d6efd;}
+
+button{
+    padding:10px 20px;
+    margin:8px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+
+
+<button id="fadeIn">Fade In</button>
+<button id="fadeOut">Fade Out</button>
+<button id="fadeToggle">Fade Toggle</button>
+<button id="fadeTo">Fade To 30%</button>
+
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$("#fadeIn").click(function(){
+$(".box").fadeIn(1000);
+});
+
+$("#fadeOut").click(function(){
+$(".box").fadeOut(1000);
+});
+
+$("#fadeToggle").click(function(){
+$(".box").fadeToggle(1000);
+});
+
+$("#fadeTo").click(function(){
+$(".box").fadeTo(1000,0.3);
+});
+
+});
+
+</script>
+
+</body>
+</html>

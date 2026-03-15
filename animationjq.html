@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Animation Example</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#121212;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    background:#0d6efd;
+    margin:40px auto;
+    border-radius:10px;
+    position:relative;
+}
+
+button{
+    padding:10px 20px;
+    margin:10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    background:#28a745;
+    color:white;
+}
+
+code{
+    background:#222;
+    padding:5px 8px;
+    border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="box"></div>
+
+<button id="animateBtn">Start Animation</button>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$("#animateBtn").click(function(){
+
+$(".box").animate({
+left: '200px',
+opacity: '0.5',
+height: '150px',
+width: '150px'
+}, 1000);
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
